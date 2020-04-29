@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="selectize/selectize.css">
+
+    <title>Alura Typer</title>
+    
+    <script src="js/jquery-3.5.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#seleciona-id-num').not('.disabled').formSelect();
+        });
+    </script>
+
+  </head>
+
+  <body >
+        
+        <header class="navbar-fixed">   
+            <nav class="light-blue lighten-1">
+                <div class="container">
+                    <div class="nav-wrapper">                    
+                        <a href="principal.html" class="brand-logo"><i class="large material-icons">insert_chart</i>Alura Typer System</a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="principal.html">O Jogo!</a></li>
+                            <li><a href="resultados.html">Resultados</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>        
+            </nav>
+        </header> 
+
+        <main class="container">
+
+            <!-- Seja bem vindo ao curso de jQuery :) -->
+                
+            <h1><img src="img/favicon.ico" width="50px" alt=""> Alura Typer</h1> 
+            
+            <div class="slider">
+                <img src="img/slide1.png" class="imagem-jogo" alt="">
+                <img src="img/slide2.png" class="imagem-jogo" alt="">
+                <img src="img/slide3.png" class="imagem-jogo" alt="">
+            </div>
+
+            <div class="row">
+                <div class="col s6 m6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/friends.jpg">
+                            <span class="card-title red" >Jogue com seus amigos!</span>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="principal.html"><i
+                                    class="material-icons">add</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p>Frases aleatórias ou a escolha para ver quem escreve mais rápido!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s6 m6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="activator" height="370" src="img/results.png">
+                            <span class="card-title red">Acompanhe os resultados</span>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="resultados.html"><i class="material-icons">add</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p>Placar dinamico, sincronizado e armazenado no servidor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+
+        </main>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/frase.js"></script>
+    <script src="js/placar.js"></script>    
+    <script src="slick/slick/slick.min.js"></script> 
+    <script src="js/slicky.js"></script>
+    <script src="slick/slick/slick.min.js"></script>
+    <script src="selectize/selectize.js"></script>
+
+    
+  </body>
+</html>

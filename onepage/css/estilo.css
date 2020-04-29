@@ -1,0 +1,76 @@
+/* Topo */
+.bg-topo{
+    background-color: #68627A;
+}
+
+.btn-orcamento{
+    border: 2px solid #fff;
+    background: none;
+    position: relative;
+    color: #fff;
+    z-index: 1;
+    border-radius: 30px;
+    height: 40px;
+}
+
+.btn-orcamento:hover{
+    color: #68627A;
+    background: #fff;
+    border-color: #fff;
+    transition: all .50s ease-in-out;
+}
+
+/* Serviços */
+.bg-servicos{
+    background: linear-gradient(131.26deg,#312b45 30%, #ff3859 100%);
+}
+
+/* Parceiros */
+.bg.parceiros{
+    background-color: #f2f0f7;
+}
+
+.sombra:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+/*Configurações Gerais*/
+.underline{
+    content: '';
+    border-top: 2px solid #ff3859;
+    width: 70px;
+    display: block;
+    margin-bottom: 8px;
+    margin: 0 auto;
+}
+
+/* Seção parallax */
+.bg-parallax{
+    background: url(../imagens/bg.jpg) fixed;
+    position: relative;
+}
+
+.fatos{
+    text-align: center;
+    color: #fff;
+}
+
+.fatos .icon i{
+    font-size: 50px;
+    color: #fff;
+}
+
+.fatos h3{
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.fatos h4{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+}

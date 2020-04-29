@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="selectize/selectize.css">
+
+    <title>Alura Typer</title>
+    
+    <script src="js/jquery-3.5.js"></script>
+
+  </head>
+
+  <body class="grey lighten-3">
+        
+    <header class="navbar-fixed">   
+        <nav class="light-blue lighten-1">
+            <div class="container">
+                <div class="nav-wrapper">                    
+                    <a href="principal.html" class="brand-logo"><i class="large material-icons">insert_chart</i>Alura Typer System</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="principal.html">O Jogo!</a></li>
+                        <li><a href="resultados.html">Resultados</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>        
+        </nav>
+    </header> 
+
+        <main class="container">
+
+            <!-- Seja bem vindo ao curso de jQuery :) -->
+                
+            <h1><img src="img/favicon.ico" width="50px" alt=""> Alura Typer</h1> 
+            
+            <section class="center">
+                <img src="img/spinner.gif" alt="" class="src" id="spinner">
+                <p id="erro">
+                    Erro na conexão. Frase não atualizada.
+                </p>
+            </section>
+
+            <section class="row">
+                <p class="frase hoverable center">Este texto está sendo atribuido para a variação da competição de quem digita mais.</p>
+            </section>
+
+            <section class="row">
+                <div class="placares">
+                    <ul class="collection grey lighten-3 " >
+                        <li class="collection-item grey lighten-3 pulse">
+                            <span id="tamanho-frase" class="new badge red lighten-1 " data-badge-caption="Total">0</span> 
+                            Palavras:
+                        </li>
+                        <li class="collection-item grey lighten-3">
+                            <span id="tempo-digitacao" class="new badge blue lighten-1" data-badge-caption="Segundos">10</span> 
+                            Tempo:
+                        </li>
+                    </ul>
+                </div>
+            </section>  
+            
+            <div class="row">
+                <section class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="nome-digitador" type="text" class="validate" maxlength="100">
+                    <label for="nome-digitador">Digite seu nome</label>
+                </section>
+            </div>            
+
+            <section class="input-field col s12">
+                <i class="material-icons prefix icone-vermelho" id="icone-digitado">mode_edit</i>
+                <textarea id="campo-digitacao" class="campo-digitacao materialize-textarea" rows="3"></textarea>
+                <label for="campo-digitacao">Digite o Texto</label>
+            </section>
+
+            <section class="row center">
+                <div class="colecao-opcoes">
+                    <div class="col s4">
+                        <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 tooltipped" id="reiniciar" alt="Reiniciar" data-position="bottom" data-tooltip="Reiniciar Jogo"><i class="material-icons">restore</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light red lighten-1 tooltipped" id="botao-placar" data-position="top" data-tooltip="Mostrar Placar"><i class="material-icons">assignment</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light teal darken-1 tooltipped" id="troca-frase" data-position="bottom" data-tooltip="Gerar frase aleatória"><i class="material-icons">shuffle</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light amber tooltipped" id="troca-frase-id" data-position="top" data-tooltip="Gerar frase selecionada"><i class="material-icons">repeat_one</i></a>
+                    </div>
+                    
+                    <div class="input-field col s6" id="troca-frase-id-id">
+                        <select id="seleciona-id-num">
+                            <option value="" disabled selected>selecione...</option>
+                            <option value="0">Alura, Cursos online...</option>
+                            <option value="1">Debuggers não consertam...</option>
+                            <option value="2">Caelum, Ensino...</option>
+                            <option value="3">Existem duas tarefas...</option>
+                            <option value="4">Ciência da computação...</option>
+                            <option value="5">Na minha máquina...</option>
+                            <option value="6">Hardware é o que...</option>
+                            <option value="7">Software em...</option>
+                            <option value="8">Iterar é humano...</option>
+                            <option value="9">Existem três jeitos...</option>
+                        </select>
+                        <label>Frases</label>
+                    </div>   
+                    <div class="col s2">
+                        <a class="btn-floating btn-large waves-effect waves-light purple darken-3 tooltipped" id="envia-resultado" data-position="bottom" data-tooltip="Enviar placar ao servidor"><i class="material-icons">archive</i></a>
+                    </div>                   
+                </div>
+            </section><br>
+
+            <section class="row">
+                
+                <ul class="collection grey lighten-3 placares">
+                    <li class="collection-item grey lighten-3 ">
+                        <span id="contador-caracteres" class="new badge red lighten-1" data-badge-caption="novos">0</span> 
+                        Caracteres:
+                    </li>
+                    <li class="collection-item grey lighten-3">
+                        <span id="contador-palavras" class="new badge blue lighten-1" data-badge-caption="novas">0</span> 
+                        Palavras:
+                    </li>
+                </ul>
+
+            </section><br>
+
+
+
+            <section class="placar">
+                <h4 class="center">Placar</h4><hr>
+
+                <table class="highlight centered tabela-placar">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Nº de Palavras</th>
+                            <th>Data / Hora</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>                   
+                    </tbody>
+                </table>
+            </section>
+            
+
+
+        </main>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/frase.js"></script>
+    <script src="js/placar.js"></script>
+    <script src="selectize/selectize.js"></script>
+    
+  </body>
+</html>

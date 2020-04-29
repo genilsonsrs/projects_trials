@@ -1,0 +1,114 @@
+body{
+    overflow: scroll;
+}
+
+h1{
+    text-align: center;
+}
+
+.slider{
+    height: auto;
+}
+
+.slick-prev:before, .slick-next:before{
+    color:  #f44336!important;
+}
+
+.card{
+    box-shadow: 10px #000 !important;
+}
+
+
+
+#erro{
+    color:  red;
+    display: none;
+}
+
+.placares{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.botoes{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.colecao-opcoes{
+    margin: 0 auto;
+}
+
+  /* label focus color */
+  .validate:focus + label {
+    color: #42a5f5 !important;
+  }
+  
+  /* label underline focus color */
+  .validate:focus {
+    border-bottom: 1px solid #42a5f5 !important;
+    box-shadow: 0 1px 0 0 #42a5f5 !important;
+  }
+
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #42a5f5;
+  }
+
+  .borda-verde{
+      border: 3px solid green;
+  }
+
+.borda-vermelha:focus{
+    border-bottom: 1px solid red !important;
+    box-shadow: 0 1px 0 0 red !important;
+    color: red;
+}
+
+.borda-vermelha:focus + label:active{
+    color: red;
+}
+
+
+.borda-vermelha .prefix.focus{
+    color: red;
+}
+
+.icone-vermelho:active{
+    color: red !important;
+}
+
+.tabela-placar{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.placar{
+    display: none;
+}
+
+#spinner{
+     display: none;   
+}
+
+#troca-frase-id-id{
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .tabela-placar{
+        width: 100%;
+    }
+
+    .placares{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .botoes{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    
+}

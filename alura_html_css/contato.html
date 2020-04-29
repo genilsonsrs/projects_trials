@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="shortcut icon" href="img/logo-branco.png">
+    <title>Alura - HTML5 e CSS - Primeira Pagina</title>
+  </head>
+
+  <body class="wrapper">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark nav-transparente fixed-top">
+        <div class="container">
+  
+            <a class="navbar-brand" href="index.html">
+              <img src="img/logo-branco.png" width="50" alt="" class="mr-1">
+              Alura Barber's Shop
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+    </header>   
+
+    <main style="margin-top: 130px; margin-bottom: 60px; " class="container">
+        <h2>Informe seus dados</h2>
+        <hr>
+        <form class="contato">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="nomeSobrenome">Nome e Sobrenome</label>
+                    <input type="text" class="form-control" id="nomeSobrenome" placeholder="digite seu nome e sobrenome" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="email@email.com" " value=" " required>
+                </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-6 mb-3 ">
+                        <label for="telefone ">Telefone</label>
+                        <input type="tel" class="form-control " id="telefone " placeholder="(xx)xx xxxxx-xxxx " value=" " required>
+                    </div>
+                    <div class="col-md-6 mb-3 ">
+                        <label for="endereco">Endereço</label>
+                        <input type="text " class="form-control " id="endereco" placeholder="digite seu endereço " value="" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="digite sua cidade">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="inputState">UF</label>
+                    <select id="inputState" class="form-control">
+                        <option selected disabled>Selcione...</option>
+                        <option>SP</option>
+                        <option>MG</option>
+                        <option>RJ</option>
+                        <option>PR</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="cep">CEP</label>
+                    <input type="text" class="form-control" id="cep" placeholder="digite seu CEP">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label for="mensagem">Deixe sua Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" cols="136" rows="3"></textarea>
+                </div>
+            </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-md-2 pt-0">Forma de contato:</legend>
+                        <div class="col-md-2">
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                Email
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                                Telefone
+                            </label>
+                            </div>
+                            <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                            <label class="form-check-label" for="gridRadios3">
+                                WhatsApp
+                            </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </fieldset>                
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12 mt-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                        <label class="form-check-label  for="invalidCheck2">Gostaria de receber nossas informações por Email?</label>
+                    </div>
+                </div>                
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label for="inputState">Melhor horario para te contatar:</label>
+                    <select id="inputState" class="form-control">
+                        <option selected disabled>Selcione...</option>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn btn-secondary btn-block" type="submit">Enviar Formulário</button>
+        </form>
+
+        <table class="table mt-5 text-center">
+            <thead class="bg-secondary text-light">
+              <tr>
+                <th colspan="2" scope="col">Dias / Horários de Funcionamento</th>
+              </tr>
+              <tr>
+                <th scope="col">Dia</th>
+                <th scope="col">Horário</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Segunda Feira</th>
+                <td>08:00 às 20:00</td>
+              </tr>
+              <tr>
+                <th scope="row">Terça Feira</th>
+                <td>08:00 às 20:00</td>
+              </tr>
+              <tr>
+                <th scope="row">Quarta Feira</th>
+                <td>08:00 às 20:00</td>
+              </tr>
+            </tbody>
+          </table>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 logo-footer">
+                    <img src="img/logo-branco.png" alt="">
+                </div>  
+                <div class="col-md-3 redes">
+                    <p>Visite nossas Redes: </p>
+                    <a href="#"><img src="img/facebook.png" alt=""></a>
+                    <a href="#"><img src="img/instagram.png" alt=""></a>
+                    <a href="#"><img src="img/twitter.png" alt=""></a>
+                </div>                  
+            </div>
+            <p>@ Copiright: Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
