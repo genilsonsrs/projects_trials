@@ -2,6 +2,7 @@ var conn = require('./db');
 
 module.exports = {
 
+    //Renderiza a tela após a execução do post no banco de dados
     render(req, res, error, success){
         res.render('reservations', {
             title: 'Reservas | Restaurante Saboroso!',
@@ -13,6 +14,7 @@ module.exports = {
         });
     },
 
+    //Salva na tabela reservations uma reserva realiziada pelo site na pagina de reservations
     save(fields){
         return new Promise((resolve, reject) =>{
 

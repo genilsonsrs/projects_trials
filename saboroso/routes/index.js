@@ -6,17 +6,16 @@ var contacts = require('./../inc/contacts');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-
-conn.query('SELECT * FROM tb_menus ORDER BY title', (err, results) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.render('index', {
-        title: 'Restaurante Saboroso!',
-        menus: results,
-        background: 'images/img_bg_1.jpg'
-      });
-    }
+  conn.query('SELECT * FROM tb_menus ORDER BY title', (err, results) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.render('index', {
+          title: 'Restaurante Saboroso!',
+          menus: results,
+          background: 'images/img_bg_1.jpg'
+        });
+      }
   });
 });
 
